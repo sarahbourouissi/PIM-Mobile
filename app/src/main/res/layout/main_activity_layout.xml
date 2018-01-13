@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="center"
+	android:background="#ffffff"
+	android:paddingTop="48dp">
+
+
+	<View
+		android:id="@+id/thickLine1"
+		android:layout_width="wrap_content"
+		android:layout_height="2dp"
+		android:layout_marginTop="10dp"
+		/>
+
+	<LinearLayout
+		android:id="@+id/slotReels"
+		android:background="#ffffff"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/thickLine1"
+		android:orientation="horizontal">
+
+
+		<com.sourcey.materiallogindemo.WheelView
+			android:id="@+id/wheel1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+		<com.sourcey.materiallogindemo.WheelView
+			android:id="@+id/wheel2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+		<com.sourcey.materiallogindemo.WheelView
+			android:id="@+id/wheel3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+	</LinearLayout>
+
+	<View
+		android:id="@+id/thickLine2"
+		android:layout_width="wrap_content"
+		android:layout_height="2dp"
+		android:layout_below="@id/slotReels"
+		android:background="@drawable/wheel_frame"/>
+
+	<RelativeLayout
+		android:id="@+id/slotSpinLayout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="10dp"
+		android:background="#ffffff"
+		android:layout_alignLeft="@id/thickLine2"
+		android:layout_alignRight="@id/thickLine2"
+		android:layout_below="@id/thickLine2"
+		>
+
+		<TextView
+			android:id="@+id/welcomeTxt"
+			android:textColor="@color/button_disabled_color"
+
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+
+			android:gravity="center"
+			android:layout_alignParentLeft="true"
+			android:padding="10dp"
+			android:text="@string/welcome_text"/>
+
+		<TextView
+			android:id="@+id/resultTxt"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/common_signin_btn_default_background"
+
+			android:padding="10dp"
+			android:gravity="center"
+			android:layout_marginRight="5dp"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@id/welcomeTxt"
+			android:text=" @string/result_text "/>
+
+
+
+		<Button
+			android:id="@+id/spin"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:text="@string/spin"
+			android:textColor="@color/button_end_color"
+
+			android:layout_below="@id/welcomeTxt"
+			android:layout_alignParentRight="true"
+			/>
+
+		<TextView
+			android:id="@+id/authorTxt"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/common_signin_btn_default_background"
+
+			android:layout_alignParentLeft="true"
+			android:layout_below="@id/spin"
+			android:textSize="12sp"
+			android:text="@string/author_text"/>
+
+		<TextView
+			android:text="win :"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@+id/resultTxt"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentStart="true"
+			android:layout_marginLeft="35dp"
+			android:layout_marginStart="35dp"
+			android:id="@+id/textView2"
+			android:textColor="@color/wallet_dim_foreground_disabled_holo_dark"
+
+			tools:text="Credit" />
+
+		<TextView
+			android:text="result"
+			android:textColor="@color/wallet_dim_foreground_disabled_holo_dark"
+
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@+id/authorTxt"
+			android:layout_alignLeft="@+id/textView2"
+			android:layout_alignStart="@+id/textView2"
+			android:id="@+id/textView3" />
+		<Spinner
+			android:id="@+id/spinner"
+			android:layout_width="fill_parent"
+			android:entries="@array/slot_bet"
+			android:layout_height="wrap_content"
+			/>
+	</RelativeLayout>
+
+</RelativeLayout>

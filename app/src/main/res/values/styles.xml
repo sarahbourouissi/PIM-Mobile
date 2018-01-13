@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+
+        <item name="android:windowBackground">@color/primary</item>
+
+        <item name="colorControlNormal">@color/iron</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="android:textColorHint">@color/iron</item>
+
+        <item name="colorButtonNormal">@color/primary_darker</item>
+        <item name="android:colorButtonNormal">@color/primary_darker</item>
+    </style>
+
+    <style name="AppTheme.Dark.Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/white</item>
+        <item name="android:textColorPrimary">@color/iron</item>
+        <item name="android:background">@color/primary</item>
+    </style>
+    <style name="CustomActionBarTheme"
+        parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBarOverlay">true</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="MyActionBar"
+        parent="@style/Widget.AppCompat.ActionBar">
+        <item name="titleTextStyle">@style/MyActionBarTitleText</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="background">@android:color/transparent</item>
+    </style>
+
+    <style name="MyActionBarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>
